@@ -1,4 +1,4 @@
-#include "LinkedList.h"
+#include "./Headers/LinkedList.h"
 using namespace std;
 
 int main() {
@@ -11,17 +11,17 @@ int main() {
   delete myLinkedList;
   return 0;
 }
-
+//  its christmass dayyy
 /* This version is more clear about what's actually happening:
-     currentNode->next = newNode;   // Link the new node to the end
-     currentNode = newNode;         // Move our position to this new last node
+     currentNode->next = newNode;      // Link the new node to the end
+     currentNode = newNode;           // Move our position to this new last node
 
   Versus the less intuitive:
-     tail->next = newNode;          // Same operation but less clear naming
-     tail = newNode;               // Same operation but less clear naming */
+     tail->next = newNode;             // Same operation but less clear naming
+     tail = newNode;                  // Same operation but less clear naming */
 
 /* This version is more clear about what's actually happening:
-     currentNode->next = newNode;    // Link the new node to the end
+     currentNode->next = newNode;     // Link the new node to the end
      currentNode = newNode;          // Move our position to this new last node
 
   Versus the less intuitive:

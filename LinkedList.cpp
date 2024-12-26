@@ -1,5 +1,5 @@
-#include "LinkedList.h"
-#include "Node.h"
+#include "./Headers/LinkedList.h"
+#include "./Headers/Node.h"
 
 LinkedList::LinkedList(int valueP) {
   Node *newNode = new Node(valueP);
