@@ -11,7 +11,6 @@ int main() {
   delete myLinkedList;
   return 0;
 }
-//  its christmass dayyy
 /* This version is more clear about what's actually happening:
      currentNode->next = newNode;      // Link the new node to the end
      currentNode = newNode;           // Move our position to this new last node
