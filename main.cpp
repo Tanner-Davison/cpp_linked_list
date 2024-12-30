@@ -11,6 +11,8 @@ int main() {
   myLinkedList->prepend(30);
   myLinkedList->deleteFirst();
   cout << myLinkedList->get(3)->value << endl;
+  myLinkedList->set(2, 200);
+  myLinkedList->printList();
   delete myLinkedList;
   return 0;
 }

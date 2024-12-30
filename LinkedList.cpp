@@ -121,3 +121,11 @@ Node *LinkedList::get(int index) {
   cout << "Get Returned: " << temp->value << endl;
   return temp;
 }
+bool LinkedList::set(int index, int value) {
+  Node *temp = get(index);
+  if (temp) {
+    temp->value = value;
+    return true;
+  }
+  return false;
+}

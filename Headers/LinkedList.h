@@ -21,4 +21,5 @@ public:
   void prepend(int value);
   void deleteFirst();
   Node *get(int index);
+  bool set(int index, int value);
 };
