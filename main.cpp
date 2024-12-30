@@ -3,6 +3,7 @@ using namespace std;
 
 int main() {
   LinkedList *myLinkedList = new LinkedList(1);
+
   myLinkedList->append(2);
   myLinkedList->append(3);
   myLinkedList->append(4);
@@ -12,7 +13,12 @@ int main() {
   myLinkedList->deleteFirst();
   cout << myLinkedList->get(3)->value << endl;
   myLinkedList->set(2, 200);
+  myLinkedList->insert(1, 300);
+  myLinkedList->deleteNode(3);
+  myLinkedList->deleteNode(1);
+  myLinkedList->deleteNode(2);
   myLinkedList->printList();
+
   delete myLinkedList;
   return 0;
 }

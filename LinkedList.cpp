@@ -129,3 +129,28 @@ bool LinkedList::set(int index, int value) {
   }
   return false;
 }
+bool LinkedList::insert(int index, int value) {
+  if (index < 0 || index > this->length)
+    return false;
+  if (index == 0) {
+    prepend(value);
+    return true;
+  }
+  Node *newNode = new Node(value);
+  Node *temp = get(index - 1);
+  newNode->next = temp->next;
+  temp->next = newNode;
+  length++;
+  return true;
+}
+void LinkedList::deleteNode(int index) {
+  if (index == 0)
+    return deleteFirst();
+  if (index == length - 1)
+    return deleteLast();
+  Node *prev = get(index - 1);
+  Node *temp = prev->next;
+  prev->next = temp->next;
+  delete temp;
+  length--;
+}
