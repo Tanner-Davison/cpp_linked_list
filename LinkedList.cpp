@@ -40,8 +40,6 @@ void LinkedList::append(int value) {
     this->tail = newNode;
   }
   ++length;
-  this->printList();
-  cout << " ( appended ) ";
 }
 void LinkedList::getHead() { cout << "Head " << head->value << endl; }
 void LinkedList::getTail() {

@@ -3,11 +3,12 @@ using namespace std;
 
 int main() {
   LinkedList *myLinkedList = new LinkedList(1);
-  int myNums = 15;
+  int myNums = 4;
   for (int i = 2; i < myNums; i++) {
     myLinkedList->append(i);
   }
   myLinkedList->getHead();
+  myLinkedList->printList();
   myLinkedList->reverse();
   myLinkedList->printList();
   delete myLinkedList;
