@@ -8,6 +8,9 @@ int main() {
   myLinkedList->append(4);
   myLinkedList->deleteLast();
   myLinkedList->append(5);
+  myLinkedList->prepend(30);
+  myLinkedList->deleteFirst();
+  cout << myLinkedList->get(3)->value << endl;
   delete myLinkedList;
   return 0;
 }

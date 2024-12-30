@@ -79,3 +79,45 @@ void LinkedList::deleteLast() {
   this->printList();
   cout << " ( delete ) \n";
 }
+void LinkedList::prepend(int value) {
+  Node *newNode = new Node(value);
+  if (length == 0) {
+    head = newNode;
+    tail = newNode;
+  } else {
+    newNode->next = head;
+    head = newNode;
+  }
+  length++;
+  this->printList();
+  cout << " ( prepend )\n";
+}
+void LinkedList::deleteFirst() {
+
+  if (this->length == 0)
+    return;
+  Node *temp = head;
+  if (length == 1) {
+    head = nullptr;
+    tail = nullptr;
+
+  } else {
+    head = head->next;
+  }
+  delete temp;
+  length--;
+  this->printList();
+  cout << "( delete first )\n";
+}
+Node *LinkedList::get(int index) {
+  if (index < 0 || index > this->length) {
+    cout << "incorrect value" << endl;
+    return nullptr;
+  }
+  Node *temp = head;
+  for (int i = 0; i < index; i++) {
+    temp = temp->next;
+  }
+  cout << "Get Returned: " << temp->value << endl;
+  return temp;
+}

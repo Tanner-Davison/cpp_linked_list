@@ -18,4 +18,7 @@ public:
   void getTail();
   void getLength();
   void deleteLast();
+  void prepend(int value);
+  void deleteFirst();
+  Node *get(int index);
 };

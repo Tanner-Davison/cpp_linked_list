@@ -6,4 +6,5 @@ public:
   Node *next;
 
   Node(int valueP);
+  Node *get(int index);
 };
