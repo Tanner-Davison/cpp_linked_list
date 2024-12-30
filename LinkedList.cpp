@@ -25,7 +25,7 @@ void LinkedList::printList() {
     } else if (temp == this->tail) {
       cout << "[" << temp->value << " Tail]";
     } else {
-      cout << "[" << temp->value << "]-> ";
+      cout << "[ " << temp->value << "]-> ";
     }
     temp = temp->next;
   }
