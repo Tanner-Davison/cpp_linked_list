@@ -154,3 +154,19 @@ void LinkedList::deleteNode(int index) {
   delete temp;
   length--;
 }
+void LinkedList::reverse() {
+  if (length <= 0) {
+    return;
+  }
+  Node *temp = this->head;
+  this->head = this->tail;
+  this->tail = temp;
+  Node *after = temp->next;
+  Node *before = nullptr;
+  for (int i = 0; i < length; i++) {
+    after = temp->next;
+    temp->next = before;
+    before = temp;
+    temp = after;
+  }
+}

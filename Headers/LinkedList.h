@@ -24,4 +24,5 @@ public:
   bool set(int index, int value);
   bool insert(int index, int value);
   void deleteNode(int index);
+  void reverse();
 };

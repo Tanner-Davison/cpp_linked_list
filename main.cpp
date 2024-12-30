@@ -8,6 +8,8 @@ int main() {
     myLinkedList->append(i);
   }
   myLinkedList->getHead();
+  myLinkedList->reverse();
+  myLinkedList->printList();
   delete myLinkedList;
   return 0;
 }
